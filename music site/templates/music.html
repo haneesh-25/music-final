@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="{{ url_for('static', filename='music.ico') }}">
+<title>MUSIC</title>
+<!-- Font Awesome CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+<!-- Googe Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='audiolanding.css') }}" rel="stylesheet">
+<!-- Jquery -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+</head>
+<body>
+
+<!-- BEGIN HERO
+================================================== -->
+<div id="image" style="background:url({{ url_for('static',filename = 'back.jpg')}}) center / cover no-repeat;">
+	<div class="section-hero">
+		<div class="container text-center">
+		
+		<h1>MUSIC BY MOOD</h1>
+		<p class="lead">
+			Hi There<br>
+			You look {{ emotion }}, playing some recommended songs 
+		</p>
+		<p>
+			<a href="#about" class="btn btn-default"><i class="fa fa-arrow-circle-o-down"></i> Learn more</a> 
+		</p>
+		{% if emotion == "Neutral" %}
+			<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0oUW2wlqBvGDdquDewQRnx?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+		{% else %}
+			<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0TFX7PXajrkqUOfw8gjG4o?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+		{% endif %}
+
+		</div>
+	</div>
+	<!-- /.container -->
+</div>
+<!-- END HERO
+================================================== -->
+
+<!-- BEGIN ABOUT
+================================================== -->
+<section id="about">
+<div class="section-about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Motive of this site</h2>
+				<div class="spacer">
+				</div>
+				<h6>how music effect mood</h6>
+			</div>
+			<div class="col-md-4">
+				<p>
+					It won’t be a surprise to most that music can affect the human brain emotionally. We all have that one song that brings us to tears, at the same time as having a song that really pumps you up and gets you going again. 
+				</p>
+				<p>
+					Music can have a massive effect on emotions, and that’s one of the reasons why composers add music to films – they want you to feel sad, happy, angry or scared at exactly the right time.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<p>
+					You’ve probably chosen music yourself to evoke a particular reaction in your brain, just like when gym-goers put on a motivational playlist full of energy to get them through a workout. 
+				</p>
+				<p>
+					All of this is, of course, backed by research that shows that music can affect our emotions in different ways. Happy, upbeat music causes our brains to produce chemicals like dopamine and serotonin, which evokes feelings of joy, whereas calming music relaxes the mind and the body.
+				</p>
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<!-- END ABOUT
+================================================== -->
+
+<!-- BEGIN TESTIMONIALS
+================================================== -->
+<section id="testimonials">
+<div class="container">
+<div class="text-center">
+	<h3 class="text-white margin-bottom40">Scientific <span class="dashme letterspace">Resources</span> On this.</h3>
+</div>
+<div class="card-columns">
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='testimonial1.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title">PubMed Central</h5>
+			<p class="card-text">
+				Utilising music as a structured intervention in treating mental illnesses such as anxiety, depression and schizophrenia has been reported as beneficial in relieving symptoms
+			</p>
+		</div>
+	</div>
+	<div class="card p-3">
+		<blockquote class="card-block card-blockquote">
+			<p>
+				Studies on patients diagnosed with mental disorders have shown a visible improvement in their mental health after interventions using music as primary tool. Other studies have demonstrated the benefits of music, including improved heart rate, motor skills, brain stimulation, and immune system enhancement.This distinguishes Music therapy from other music interventions, offered mainly by medical or healthcare professionals
+			</p>
+			<footer>
+			</footer>
+		</blockquote>
+	</div>
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='testimonial2.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title"></h5>
+			<p class="card-text">
+				Research shows the benefits of music therapy for various mental health conditions, including depression, trauma, and schizophrenia (to name a few).
+			</p>
+			</p>
+		</div>
+	</div>
+	<div class="card card-inverse card-primary p-3 text-center">
+		<blockquote class="card-blockquote">
+			<p>
+				Playing instruments can encourage emotional expression, socialization and exploration of various therapeutic themes
+			</p>
+			<footer>
+			</footer>
+		</blockquote>
+	</div>
+	<div class="card text-center">
+		<div class="card-block">
+			<h5 class="card-title">Give it a try</h5>
+			<p class="card-text">
+				Music acts as a medium for processing emotions, trauma, and grief, The potential of music to affect mood, cognition, and behavior
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='testimonial3.jpg') }}" alt="Card image cap">
+	</div>
+	<div class="card p-3 text-right">
+		<blockquote class="card-blockquote">
+			<p>
+				Music can be utilized to regulate mood. Because of its rhythmic and repetitive aspects, music engages the neocortex of our brain.
+			</p>
+			<footer>
+			</footer>
+		</blockquote>
+	</div>
+	<div class="card">
+		<div class="card-block">
+			<h5 class="card-title">National Library of Medicine</h5>
+			<p class="card-text">
+				Music is a crucial element of everyday life and plays a central role in all human cultures: it is omnipresent and is listened to and played by persons of all ages, races, and ethnic backgrounds. But music is not simply entertainment: scientific research has shown that it can influence physiological processes that enhance physical and mental wellbeing. Consequently, it can have critical adaptive functions.
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<!-- END TESTIMONIALS
+================================================== -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="js/tether.min.js"></script>-->
+<script src="{{ url_for('static', filename='js/tether.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/audiolanding.js') }}"></script>
+<script src="{{ url_for('static', filename='js/ie10-viewport-bug-workaround.js') }}"></script>
+
+</body>
+</html>
